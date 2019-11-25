@@ -5,15 +5,22 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html -d public"
   },
   "dependencies": {
+    "@types/classnames": "^2.2.9",
+    "classnames": "^2.2.6",
     "preact": "^10.0.5",
     "preact-router": "^3.1.0",
+    "react-jss": "^10.0.0",
     "typescript": "^3.7.2"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
     "sass": "^1.23.7"
+  },
+  "alias": {
+    "react": "preact/compat",
+    "react-dom": "preact/compat"
   }
 }
