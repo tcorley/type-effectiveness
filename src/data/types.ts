@@ -3,119 +3,122 @@ import { Type } from '../types/d';
 const types: Type[] = [
   {
     name: 'Normal',
-    immunes: ['Ghost'],
-    weaknesses: ['Rock', 'Steel'],
-    strengths: []
+    immuneTo: ['Ghost'],
+    weakTo: ['Fighting'],
+    resistantAgainst: []
   },
   {
     name: 'Fire',
-    immunes: [],
-    weaknesses: ['Fire', 'Water', 'Rock', 'Dragon'],
-    strengths: ['Grass', 'Ice', 'Bug', 'Steel']
+    immuneTo: [],
+    weakTo: ['Water', 'Ground', 'Rock'],
+    resistantAgainst: ['Fire', 'Grass', 'Ice', 'Bug', 'Steel', 'Fairy']
   },
   {
     name: 'Water',
-    immunes: [],
-    weaknesses: ['Water', 'Grass', 'Dragon'],
-    strengths: ['Fire', 'Ground', 'Rock']
+    immuneTo: [],
+    weakTo: ['Grass', 'Electric'],
+    resistantAgainst: ['Fire', 'Water', 'Ice', 'Steel']
   },
   {
     name: 'Electric',
-    immunes: ['Ground'],
-    weaknesses: ['Electric', 'Grass', 'Dragon'],
-    strengths: ['Water', 'Flying']
+    immuneTo: [],
+    weakTo: ['Ground'],
+    resistantAgainst: ['Electric', 'Flying', 'Steel']
   },
   {
     name: 'Grass',
-    immunes: [],
-    weaknesses: ['Fire', 'Grass', 'Poison', 'Flying', 'Bug', 'Dragon', 'Steel'],
-    strengths: ['Water', 'Ground', 'Rock']
+    immuneTo: [],
+    weakTo: ['Fire', 'Ice', 'Poison', 'Flying', 'Bug'],
+    resistantAgainst: ['Water', 'Grass', 'Electric', 'Ground']
   },
   {
     name: 'Ice',
-    immunes: [],
-    weaknesses: ['Fire', 'Water', 'Ice', 'Steel'],
-    strengths: ['Grass', 'Ground', 'Flying', 'Dragon']
+    immuneTo: [],
+    weakTo: ['Fire', 'Fighting', 'Rock', 'Steel'],
+    resistantAgainst: ['Ice']
   },
   {
     name: 'Fighting',
-    immunes: ['Ghost'],
-    weaknesses: ['Poison', 'Flying', 'Psychic', 'Bug', 'Fairy'],
-    strengths: ['Normal', 'Ice', 'Rock', 'Dark', 'Steel']
+    immuneTo: [],
+    weakTo: ['Flying', 'Psychic', 'Fairy'],
+    resistantAgainst: ['Bug', 'Rock', 'Dark']
   },
   {
     name: 'Poison',
-    immunes: ['Steel'],
-    weaknesses: ['Poison', 'Ground', 'Rock', 'Ghost'],
-    strengths: ['Grass', 'Fairy']
+    immuneTo: [],
+    weakTo: ['Ground', 'Psychic'],
+    resistantAgainst: ['Grass', 'Fighting', 'Poison', 'Bug', 'Fairy']
   },
   {
     name: 'Ground',
-    immunes: ['Flying'],
-    weaknesses: ['Grass', 'Bug'],
-    strengths: ['Fire', 'Electric', 'Poison', 'Rock', 'Steel']
+    immuneTo: ['Electric'],
+    weakTo: ['Water', 'Grass', 'Ice'],
+    resistantAgainst: ['Poison', 'Rock']
   },
   {
     name: 'Flying',
-    immunes: [],
-    weaknesses: ['Electric', 'Rock', 'Steel'],
-    strengths: ['Grass', 'Fighting', 'Bug']
+    immuneTo: ['Ground'],
+    weakTo: ['Electric', 'Ice'],
+    resistantAgainst: ['Grass', 'Fighting', 'Bug']
   },
   {
     name: 'Psychic',
-    immunes: ['Dark'],
-    weaknesses: ['Psychic', 'Steel'],
-    strengths: ['Fighting', 'Poison']
+    immuneTo: [],
+    weakTo: ['Bug', 'Ghost', 'Dark'],
+    resistantAgainst: ['Fighting', 'Psychic']
   },
   {
     name: 'Bug',
-    immunes: [],
-    weaknesses: [
-      'Fire',
-      'Fighting',
-      'Poison',
-      'Flying',
-      'Ghost',
-      'Steel',
-      'Fairy'
-    ],
-    strengths: ['Grass', 'Psychic', 'Dark']
+    immuneTo: [],
+    weakTo: ['Fire', 'Flying', 'Rock'],
+    resistantAgainst: ['Grass', 'Fighting', 'Ground']
   },
   {
     name: 'Rock',
-    immunes: [],
-    weaknesses: ['Fighting', 'Ground', 'Steel'],
-    strengths: ['Fire', 'Ice', 'Flying', 'Bug']
+    immuneTo: [],
+    weakTo: ['Water', 'Grass', 'Fighting', 'Ground', 'Steel'],
+    resistantAgainst: ['Normal', 'Fire', 'Poison', 'Flying']
   },
   {
     name: 'Ghost',
-    immunes: ['Normal'],
-    weaknesses: ['Dark'],
-    strengths: ['Psychic', 'Ghost']
+    immuneTo: ['Normal', 'Fighting'],
+    weakTo: ['Ghost', 'Dark'],
+    resistantAgainst: ['Poison', 'Bug']
   },
   {
     name: 'Dragon',
-    immunes: ['Fairy'],
-    weaknesses: ['Steel'],
-    strengths: ['Dragon']
+    immuneTo: [],
+    weakTo: ['Ice', 'Dragon', 'Fairy'],
+    resistantAgainst: ['Fire', 'Water', 'Grass', 'Electric']
   },
   {
     name: 'Dark',
-    immunes: [],
-    weaknesses: ['Fighting', 'Dark', 'Fairy'],
-    strengths: ['Psychic', 'Ghost']
+    immuneTo: ['Psychic'],
+    weakTo: ['Fighting', 'Bug', 'Fairy'],
+    resistantAgainst: ['Ghost', 'Dark']
   },
   {
     name: 'Steel',
-    immunes: [],
-    weaknesses: ['Fire', 'Water', 'Electric', 'Steel'],
-    strengths: ['Ice', 'Rock', 'Fairy']
+    immuneTo: ['Poison'],
+    weakTo: ['Fire', 'Fighting', 'Ground'],
+    resistantAgainst: [
+      'Normal',
+      'Grass',
+      'Ice',
+      'Flying',
+      'Psychic',
+      'Bug',
+      'Rock',
+      'Dragon',
+      'Steel',
+      'Fairy'
+    ]
   },
   {
     name: 'Fairy',
-    immunes: [],
-    weaknesses: ['Fire', 'Poison', 'Steel'],
-    strengths: ['Fighting', 'Dragon', 'Dark']
+    immuneTo: ['Dragon'],
+    weakTo: ['Poison', 'Steel'],
+    resistantAgainst: ['Fighting', 'Bug', 'Dark']
   }
 ];
 

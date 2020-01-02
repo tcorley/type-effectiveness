@@ -20,7 +20,7 @@ export type PokemonType =
 
 export interface Type {
   name: PokemonType;
-  immunes: PokemonType[];
-  weaknesses: PokemonType[];
-  strengths: PokemonType[];
+  immuneTo: PokemonType[];
+  weakTo: PokemonType[];
+  resistantAgainst: PokemonType[];
 }

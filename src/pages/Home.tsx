@@ -26,18 +26,16 @@ const Home = () => {
       {!!selected.length && (
         <div>
           <div>
-            {`Weak to ${selected
-              .map(type => type.weaknesses.join(','))
-              .join(',')}`}
+            {`Weak to ${selected.map(type => type.weakTo.join(',')).join(',')}`}
           </div>
           <div>
             {`Immune to ${selected
-              .map(type => type.immunes.join(','))
+              .map(type => type.immuneTo.join(','))
               .join(',')}`}
           </div>
           <div>
             {`Strong to ${selected
-              .map(type => type.strengths.join(','))
+              .map(type => type.resistantAgainst.join(','))
               .join(',')}`}
           </div>
         </div>
